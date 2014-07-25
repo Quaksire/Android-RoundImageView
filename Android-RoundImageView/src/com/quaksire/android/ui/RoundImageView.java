@@ -76,7 +76,7 @@ public class RoundImageView extends ImageView {
                     } catch (ClassCastException e) {
                         b = createWhitePaintCircle();
                     }
-                    Bitmap bitmap = b.copy(Bitmap.Config.ARGB_4444, true);
+                    Bitmap bitmap = b.copy(Bitmap.Config.ARGB_8888, true);
 
                     Bitmap roundBitmap = getCroppedBitmap(bitmap, getWidth());
                     canvas.drawBitmap(roundBitmap, 0, 0, null);
@@ -96,7 +96,7 @@ public class RoundImageView extends ImageView {
      */
     private Bitmap createWhitePaintCircle() {
         Rect rect = new Rect(0, 0, getWidth(), getHeight());
-        Bitmap b = Bitmap.createBitmap(getWidth(), getHeight(), Config.ARGB_4444);
+        Bitmap b = Bitmap.createBitmap(getWidth(), getHeight(), Config.ARGB_8888);
         Canvas _canvas = new Canvas(b);
 
         int color = Color.WHITE;
@@ -118,7 +118,7 @@ public class RoundImageView extends ImageView {
         Bitmap sbmp = scaleBitmap(bmp, radius, radius);
 
         Bitmap output = Bitmap.createBitmap(sbmp.getWidth(),
-                sbmp.getHeight(), Bitmap.Config.ARGB_4444);
+                sbmp.getHeight(), Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(output);
 
         final Paint paint = new Paint();

@@ -4,10 +4,15 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
-<TextView
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:text="Hello World, MainActivity"
-    />
+
+    <com.quaksire.android.ui.RoundImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/white_color"/>
+    
+    <com.quaksire.android.ui.RoundImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/wolf"/>
 </LinearLayout>
 
